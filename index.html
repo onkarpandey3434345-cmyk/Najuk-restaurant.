@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NAJUK Restaurant</title>
+</head>
+<body>
+
+    <h1>🍕 Welcome to NAJUK Restaurant 🍕</h1>
+
+    <h3>Menu</h3>
+
+    <p>Pizza - ₹40</p>
+    <p>Pasta - ₹50</p>
+    <p>Burger - ₹60</p>
+    <p>Salad - ₹70</p>
+    <p>Coffee - ₹80</p>
+
+    <hr>
+
+    <label>Select Item:</label>
+
+    <select id="item">
+        <option value="40">Pizza</option>
+        <option value="50">Pasta</option>
+        <option value="60">Burger</option>
+        <option value="70">Salad</option>
+        <option value="80">Coffee</option>
+    </select>
+
+    <br><br>
+
+    <button onclick="calculateBill()">
+        Add Item
+    </button>
+
+    <h2 id="total">Total Bill = ₹0</h2>
+
+    <script>
+
+        let total = 0;
+
+        function calculateBill() {
+
+            let price =
+                parseInt(document.getElementById("item").value);
+
+            total += price;
+
+            document.getElementById("total").innerHTML =
+                "Total Bill = ₹" + total;
+        }
+
+    </script>
+
+</body>
+  </html>
